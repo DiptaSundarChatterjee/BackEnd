@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Book Store</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            padding: 0;
+            list-style: none;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            background: url('/images/hero.jpg') no-repeat center center/cover;
+            color: #b1b0b0;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: rgb(209, 246, 246);
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .hero .btn {
+            background: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .hero .btn:hover {
+            background: #0056b3;
+        }
+
+
+        .featured-books {
+            padding: 50px 0;
+            background: #fff;
+            text-align: center;
+        }
+
+        .featured-books h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .book-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .book {
+            background: #f4f4f4;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            text-align: center;
+            width: calc(25% - 40px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .book img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .book h3 {
+            margin-top: 10px;
+        }
+
+        .book:hover {
+            transform: translateY(-10px);
+        }
+
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            /* position: absolute;*/
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header>
+        <div class="container">
+            <h1>Online Book Store</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/books">Books</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <section class="welcome">
+        <div class="welcome-name">
+            <h2>Welcome, {{name}}!</h2>
+        </div>
+    </section>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Discover Your Next Great Read</h2>
+            <p>Browse our collection of thousands of books and order your favorites online.</p>
+            <a href="/books" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+
+    <section class="featured-books">
+        <div class="container">
+            <h2>Popular Books</h2>
+            <div class="book-grid">
+                <div class="book">
+                    <img src="https://cdn.kobo.com/book-images/73a7aebd-0bc0-4d63-a4f7-865af7f48bef/1200/1200/False/a-game-of-thrones-a-song-of-ice-and-fire-book-1.jpg"
+                        alt="Book 1">
+                    <h3>Game of Thrones</h3>
+                </div>
+                <div class="book">
+                    <img src="https://www.adazing.com/wp-content/uploads/2020/03/george2-scaled.jpg" alt="Book 2"
+                        height="390">
+                    <h3>A Clash of Kings</h3>
+                </div>
+                <div class="book">
+                    <img src="https://www.adazing.com/wp-content/uploads/2020/03/george3-scaled.jpg" alt="Book 3">
+                    <h3>A Storm of Swords</h3>
+                </div>
+                <div class="book">
+                    <img src="https://m.media-amazon.com/images/I/81DCn8AcmqL._SL1500_.jpg" alt="Book 4" height="395">
+                    <h3>A Dance with Dragons</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Online Book Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

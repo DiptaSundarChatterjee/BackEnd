@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp Page</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: linear-gradient(to right, #134e5e, #71b280);
+        }
+
+        h2 {
+            font-size: 70px;
+            display: flex;
+            justify-content: center;
+            margin-top: 5rem;
+        }
+
+        .parent {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+
+        }
+
+        form {
+            background: linear-gradient(to left, #134e5e, #71b280);
+            padding: 8%;
+        }
+
+
+        input[type="password"] {
+            /* width: calc(100% - 10px);*/
+            padding: 15px 125px 15px 15px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="text"] {
+            /*width: calc(100% - 10px);*/
+            padding: 15px 215px 15px 15px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-left: 110px;
+            margin-top: 1rem;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>SignUp</h2>
+    <div class="parent">
+        <form action="/signup" method="post">
+
+            <input type="text" name="name" placeholder="Enter name" style="width: 100px;"> <br>
+            <input type="password" name="password" placeholder="Enter password"> <br>
+            <select name="userType" required>
+                <option value="student">Student</option>
+                <option value="admin">Admin</option>
+                <option value="instructor">Instructor</option>
+            </select>
+            <input type="submit">
+        </form>
+    </div>
+
+
+
+</body>
+
+</html>

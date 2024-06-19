@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructor Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            padding: 0;
+            list-style: none;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .welcome {
+            padding: 20px 0;
+            text-align: center;
+            background: #007BFF;
+            color: #fff;
+        }
+
+        .student-list {
+            padding: 20px 0;
+        }
+
+        .student-list h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .student-list ul {
+            list-style: none;
+            text-align: center;
+        }
+
+        .student-list ul li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>Instructor Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/books">Books</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="welcome">
+    <div class="container">
+        <h2>Welcome, {{name}}!</h2>
+    </div>
+</section>
+
+<section class="student-list">
+    <div class="container">
+        <h2>Registered Students</h2>
+        <ul>
+            {{#each students}}
+                <li>{{this.name}}</li>
+            {{/each}}
+        </ul>
+    </div>
+</section>
+
+</body>
+</html>
